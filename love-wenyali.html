@@ -16,8 +16,8 @@
     }
     canvas {
       position: absolute;
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
     }
     .namebox{
       color: #fff;
@@ -41,7 +41,7 @@
 <script>
   var settings = {
     particles: {
-      length: 200, // maximum amount of particles
+      length: 500, // maximum amount of particles
       duration: 2, // particle duration in sec
       velocity: 100, // particle velocity in pixels/sec
       effect: -0.75, // play with this for a nice effect
@@ -192,7 +192,7 @@
 // get point on heart with -PI <= t <= PI
     function pointOnHeart(t) {
       return new Point(
-              160 * Math.pow(Math.sin(t), 3),
+              160 * Math.pow(Math.sin(t), 3)/2,
               130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
       );
 
